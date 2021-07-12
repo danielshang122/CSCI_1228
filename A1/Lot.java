@@ -14,9 +14,9 @@ public class Lot {
 
 	public Lot() {
 		carLotNumber++;
-		this.subCompacts = new Car[] { new Car(2022, "black") };
-		this.compacts = new Car[] { new Car(2022, "black") };
-		this.other = new Car[] { new Car(2022, "black") };
+		this.subCompacts = new Car[] { new Car() };
+		this.compacts = new Car[] { new Car() };
+		this.other = new Car[] { new Car() };
 	}
 
 	public Car[] getSubCompacts() {
@@ -48,19 +48,19 @@ public class Lot {
 		int year = 2022;
 		for (Car car : compacts) {
 			if (car.getYear() < year) {
-				year=car.getYear();
+				year = car.getYear();
 				oldestCar = car;
 			}
 		}
 		for (Car car : subCompacts) {
 			if (car.getYear() < year) {
-				year=car.getYear();
+				year = car.getYear();
 				oldestCar = car;
 			}
 		}
 		for (Car car : other) {
 			if (car.getYear() < year) {
-				year=car.getYear();
+				year = car.getYear();
 				oldestCar = car;
 			}
 		}
